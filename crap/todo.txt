@@ -1,7 +1,13 @@
-April 10, 2026 (13:49 IST)
-for v0, i wanna keep things lean and easy.
-FIFO + nearest 'free' rider.
+April 10, 2026 (14:42 IST)
+now that i've  achieved the 'nearest rider to consignment' ting.
+we have to work on top of it
 
-things i gotta figure out:
-to and from distance of the consigment
-selection of drivers considering the distance, status and the radius.
+-> if a driver has been appointed for consignment A, and he also seems to be closest to consignment B as well.
+then, consignment A ~= B, hence, he'll be notified bout the other consignment. its upto him whether to pick up or nah.
+also we have to optimise our queue in such a way that we quickly sort out other consignmets based on the dequeued origin point. to check whether \
+some other consignment is closer to it.
+
+gotta look for:
+batching
+improving driver selection
+
