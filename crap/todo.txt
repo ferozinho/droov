@@ -7,3 +7,7 @@ the engine is what we need to nail at first.
 avoid overloading, all distributed, async and smooth.
 time,constraint is what we'll focus on later.
 for now we'll keep things simple.
+db and all we're gonna choose our trusty old sqlite3 to keep it simple and straight forward(prototype ofc.)
+we're gonna sort out the auth and the 'access to our apis' part later.
+
+## imp = build the actual shit first, then we proceed over the cosmetics//secondary stuff.
