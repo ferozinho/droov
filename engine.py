@@ -9,7 +9,7 @@ class Engine:
     c_queue.bulk_enqueue(consignments)
     consignment = c_queue.dequeue()
     cords = consignment.origin
-    nearest_driver_dist = 100000
+    nearest_driver_dist = 100
     driver_assigned = None
     for i in drivers:
         driver_dist = math.sqrt(
@@ -19,7 +19,7 @@ class Engine:
         if nearest_driver_dist > driver_dist:
             nearest_driver_dist = driver_dist
             driver_assigned = i
-
+    print(consignment)
     print(nearest_driver_dist)
     print(driver_assigned)
 engine = Engine()

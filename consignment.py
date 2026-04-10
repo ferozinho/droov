@@ -76,6 +76,6 @@ class ConsignmentQueue:
     
 def get_consignments(size:int):
     consignments = []
-    for i in range(1,size-1):
+    for i in range(1,size+1):
         consignments.append(Consignment())
     return consignments
