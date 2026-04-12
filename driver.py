@@ -19,6 +19,11 @@ class Driver:
         self.is_active = True
         self.cords = {"x": random.randint(10,99),"y": random.randint(10,99)}
         self.consignments = []
+    
+    @property
+    def is_occupied(self):
+        return len(self.consignments) == 2
+
     def __repr__(self):
         attrs = ", ".join(f"{k}={v!r}" for k, v in self.__dict__.items())
         return f"{self.__class__.__name__}({attrs})"

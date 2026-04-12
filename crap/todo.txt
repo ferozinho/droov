@@ -1,13 +1,24 @@
-April 10, 2026 (14:42 IST)
-now that i've  achieved the 'nearest rider to consignment' ting.
-we have to work on top of it
+April 12, 2026 14:50(IST)
 
--> if a driver has been appointed for consignment A, and he also seems to be closest to consignment B as well.
-then, consignment A ~= B, hence, he'll be notified bout the other consignment. its upto him whether to pick up or nah.
-also we have to optimise our queue in such a way that we quickly sort out other consignmets based on the dequeued origin point. to check whether \
-some other consignment is closer to it.
+current_achievement:
+got 1:1 engine working
 
-gotta look for:
-batching
-improving driver selection
+next:
+wanna implement multiple order assignment
+d.status !== Unavailable or len(d.consignmets)==2
+    continue
+else:
+    assignment logic.
+time simulation
+--------------------------------
+
+April 12, 20:51(IST)
+
+multi-assignment works. but it isnt as we expected it to.
+as we're currently dealing with randomly generated cords and there is no sense of "time"
+everything is almost instant and hence. most of the drivers dont even get chance to grab their consignments
+
+next:
+time.literally.
+tick system should do the trick for now. later we'll expand it to timeframes
 
