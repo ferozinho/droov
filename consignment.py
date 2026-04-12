@@ -18,6 +18,7 @@ class Consignment:
         self.updated_at : datetime.datetime | None = None
         self.logs : list = [f"order placed at:{self.created_at}"]
         self.is_active : bool = True
+        self.is_assigned_to: int = None
         self.origin = {"x": random.randint(10,99),"y": random.randint(10,99)}
         self.destination = {"x": random.randint(10,99),"y": random.randint(10,99)}
     def __repr__(self):
@@ -45,7 +46,7 @@ class ConsignmentQueue:
         self.top+=list_size
         print(f"enqueued {list_size} consignments")
 
-    def enqueue(self,consignment:Consignment):
+    def enqueue(self,consignment:int):
         if self.isFull():
             print("overflow")
             return
@@ -75,7 +76,8 @@ class ConsignmentQueue:
             print(self.queue[i])
     
 def get_consignments(size:int):
-    consignments = []
+    consignments = {}
     for i in range(1,size+1):
-        consignments.append(Consignment())
+        consignment = Consignment()
+        consignments[consignment.c_id]=consignment
     return consignments
